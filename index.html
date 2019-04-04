@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/main.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="./img/main_logo.png" alt="main_logo" />
+    </header>
+    <main>
+      <div class="container">
+        <div class="form-grid">
+          <!-- Form A: Register Form -->
+          <div class="form-item form-a">
+            <h2 class="form-item__title">Register Form</h2>
+            <form class="form-item__form">
+              <div class="form-item__field">
+                <i class="fas fa-user"></i>
+                <input
+                  id="reg_username"
+                  name="username"
+                  type="text"
+                  placeholder="Username"
+                  required
+                />
+                <label for="reg_username">Username</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-lock"></i>
+                <input
+                  id="reg_password"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <label for="reg_password">Password</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-lock"></i>
+                <input
+                  id="reg_conf-password"
+                  name="conf-password"
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <label for="reg_conf-password">Confirm Password</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-envelope"></i>
+                <input
+                  id="reg_email"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="reg_email">Email</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-map-marker-alt"></i>
+                <select name="location" id="reg_location" required>
+                  <option value="" disabled selected hidden
+                    >Your Location</option
+                  >
+                  <option value="cracow">Cracow</option>
+                  <option value="warsaw">Warsaw</option>
+                  <option value="gdansk">Gdańsk</option>
+                </select>
+                <label for="reg_location">Your Location</label>
+              </div>
+              <div class="form-item__submit">
+                <input id="reg_terms" name="terms" type="checkbox" required />
+                <label for="reg_terms"
+                  >I have read and accept the terms of use.</label
+                >
+                <button class="btn--primary" type="submit">Sign up</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Form B: Send Email -->
+          <div class="form-item form-b">
+            <h2 class="form-item__title">Send Email</h2>
+            <form class="form-item__form">
+              <div class="form-item__field">
+                <i class="fas fa-user"></i>
+                <input
+                  id="send_username"
+                  name="username"
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                />
+                <label for="send_username">Username</label>
+              </div>
+
+              <div class="form-item__field">
+                <i class="fas fa-envelope"></i>
+                <input
+                  id="send_email"
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <label for="send_email">Email</label>
+              </div>
+              <div class="form-item__field form-item__field--textarea">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Type your message..."
+                  required
+                ></textarea>
+                <label for="message">Email</label>
+              </div>
+
+              <div class="form-item__submit">
+                <input id="send_terms" name="terms" type="checkbox" required />
+                <label for="send_terms">Send a copy to my Email</label>
+                <button class="btn--primary" type="submit">Send Email</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Form C: Sign In Form -->
+          <div class="form-item form-c">
+            <h2 class="form-item__title">Sign In Form</h2>
+            <form class="form-item__form">
+              <div class="form-item__field">
+                <i class="fas fa-user"></i>
+                <input
+                  id="sign_username"
+                  name="username"
+                  type="text"
+                  placeholder="Username"
+                  required
+                />
+                <label for="sign_username">Username</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-lock"></i>
+                <input
+                  id="sign_password"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <label for="sign_password">Password</label>
+              </div>
+              <div class="form-item__submit">
+                <input id="sign_terms" name="terms" type="checkbox" required />
+                <label for="sign_terms">Remember me.</label>
+                <button class="btn--primary" type="submit">Sign in</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Form D: Recover Form -->
+          <div class="form-item form-d">
+            <h2 class="form-item__title">Recover Form</h2>
+            <form class="form-item__form">
+              <div class="form-item__field">
+                <i class="fas fa-envelope"></i>
+                <input
+                  id="rec_email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your Email"
+                  required
+                />
+                <label for="rec_email">Email</label>
+              </div>
+              <div class="form-item__field">
+                <i class="fas fa-phone"></i>
+                <input
+                  id="rec_phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Enter your Phone number"
+                  required
+                />
+                <label for="rec_phone">Phone</label>
+              </div>
+              <div class="form-item__submit">
+                <button class="btn--primary btn--small" type="submit">
+                  Send
+                </button>
+                <button class="btn--primary btn--small" type="submit" disabled>
+                  Done
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Form E: Subscribe Form -->
+          <div class="form-item form-e">
+            <h2 class="form-item__title">Subscribe Form</h2>
+            <form class="form-item__form">
+              <div class="form-item__field">
+                <i class="fas fa-envelope"></i>
+                <input
+                  id="sub_email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your Email"
+                  required
+                />
+                <label for="sub_email">Email</label>
+              </div>
+
+              <div class="form-item__submit">
+                <button class="btn--primary btn--small" type="submit">
+                  Subscribe
+                </button>
+                <button class="btn--close btn--small" type="submit">
+                  No, Thanks
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Form F: Logo -->
+          <div class="form-item form-f">
+            <img src="./img/sec_logo.png" alt="sec_logo" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+
+@media (max-width: 1050px) {
+  .header {
+    &__logo {
+      width: 70%;
+    }
+  }
+  main {
+    .form-grid {
+      columns: unset;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    padding: 0;
+  }
+  main {
+    .form-grid {
+      columns: 1;
+      
+      .form-c,
+      .form-d,
+      .form-e {
+        .form-item__submit {
+          grid-template-columns: 1fr;
+          grid-gap: 20px;
+        }
+      }
+      .form-f{
+          img {
+              width: 70%;
+          }
+      }
+    }
+  }
+}

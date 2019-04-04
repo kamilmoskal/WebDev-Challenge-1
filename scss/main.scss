@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.4;
+  padding: 54px 0;
+  background: url("../img/bg.jpg") no-repeat top/cover;
+}
+
+////////////////
+/*  Utilities */
+////////////////
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 68px;
+}
+
+// Form Item
+.form-item {
+  &__title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+  }
+  &__form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    background-clip: padding-box;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+  }
+  &__field {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &--textarea {
+      height: 230px;
+    }
+
+    &:focus-within {
+      background: #fff;
+      border-color: #7ec31f;
+    }
+    .fas {
+      font-size: 1.4rem;
+      color: #dedede;
+      flex-basis: 50px;
+      text-align: center;
+      border-right: 1px solid #c6c6c6;
+    }
+
+    input,
+    select,
+    textarea {
+      flex: 1;
+      height: 100%;
+      padding-left: 22px;
+      border: none;
+      font-family: inherit;
+      background-color: transparent;
+      color: #afafaf;
+      font-weight: 300;
+    }
+    textarea {
+      resize: none;
+      padding-top: 10px;
+    }
+    select {
+      padding-left: 18px;
+      color: #afafaf;
+    }
+
+    label {
+      display: none;
+    }
+  }
+}
+
+// Checkbox
+input[type="checkbox"] {
+  display: none;
+
+  &:not(:checked) + label:after {
+    opacity: 0;
+  }
+  &:checked + label:after {
+    opacity: 1;
+  }
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  color: #afafaf;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 2.5rem;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    background: #f6f6f6;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(#a3d840, #7ec31f);
+    border-radius: 3px;
+  }
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.3rem 2rem;
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+.btn {
+  &--primary {
+    @extend %btn-shared;
+    color: #333;
+    background: linear-gradient(#a3d840, #7ec31f);
+    text-shadow: 1px 1px 2px #2c6a02;
+    border: 1px solid #3b9a00;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  &--close {
+    @extend %btn-shared;
+    color: #333;
+    background: linear-gradient(#f65e70, #f03747);
+    text-shadow: 1px 1px 2px #4e2505;
+    border: 1px solid #a72c36;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  &--small {
+    font-size: 1rem;
+  }
+}
+
+// Header
+.header {
+  text-align: center;
+
+  &__logo {
+    opacity: 0.5;
+  }
+}
+
+// Main
+main {
+  .form-grid {
+    columns: 2;
+    column-gap: 80px;
+
+    .form-item {
+      max-width: 500px;
+      margin: auto;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .form-a,
+    .form-b {
+      .form-item__submit {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+      }
+    }
+    .form-c,
+    .form-d,
+    .form-e {
+      .form-item__submit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        align-items: center;
+      }
+    }
+    .form-f {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 260px;
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@import "./mobile";
